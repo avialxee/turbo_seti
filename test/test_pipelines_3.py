@@ -110,15 +110,15 @@ def test_pipeline_h5_dat_colocated():
 
     # df_event should not be nil.
     if df_event is None:
-        raise ValueError('test_pipeline_same_source: returned pandas df is None!')
+        raise ValueError('test_pipeline_h5_dat_colocated: returned pandas df is None!')
 
     # CSV file created?
     if not Path(PATH_CSVF).exists():
-        raise ValueError('test_pipeline_same_source: No CSV of events created')
+        raise ValueError('test_pipeline_h5_dat_colocated: No CSV of events created')
 
     # An event CSV was created.
     # Validate the hit table file.
-    utl.validate_hittbl(df_event, PATH_CSVF, 'test_pipeline_same_source', N_EVENTS)
+    utl.validate_hittbl(df_event, PATH_CSVF, 'test_pipeline_h5_dat_colocated', N_EVENTS)
     print('\n===== test_pipeline_h5_dat_colocated: END =====')
 
 def test_pipeline_h5_dat_separated():
@@ -155,15 +155,15 @@ def test_pipeline_h5_dat_separated():
 
     # df_event should not be nil.
     if df_event is None:
-        raise ValueError('test_pipeline_same_source: returned pandas df is None!')
+        raise ValueError('test_pipeline_h5_dat_separated: returned pandas df is None!')
 
     # CSV file created?
     if not Path(PATH_CSVF).exists():
-        raise ValueError('test_pipeline_same_source: No CSV of events created')
+        raise ValueError('test_pipeline_h5_dat_separated: No CSV of events created')
 
     # An event CSV was created.
     # Validate the hit table file.
-    utl.validate_hittbl(df_event, PATH_CSVF, 'test_pipeline_same_source', N_EVENTS)
+    utl.validate_hittbl(df_event, PATH_CSVF, 'test_pipeline_h5_dat_separated', N_EVENTS)
 
     # Plots!
     plot_event_pipeline(PATH_CSVF,
